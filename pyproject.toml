@@ -1,0 +1,18 @@
+[project]
+name = "sql-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.129.0",
+    "langchain>=1.2.10",
+    "langchain-community>=0.4.1",
+    "langchain-openai>=1.1.9",
+    "langgraph>=1.0.8",
+    "pandas>=3.0.0",
+    "pinecone>=8.0.1",
+    "psycopg2-binary>=2.9.11",
+    "sqlalchemy>=2.0.46",
+    "uvicorn>=0.40.0",
+]
