@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from src.middleware.run_graph import run_sql_pipeline
+import traceback
 
 app = FastAPI(title="SQL Agent API")
 
@@ -18,5 +19,6 @@ async def get_sql_agent(payload: SQLAgentRequest):
         return JSONResponse(content=result)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except Exception:
-        raise HTTPException(status_code=500, detail="Failed to execute SQL pipeline")
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Failed to execute SQL pipeline: {e}")

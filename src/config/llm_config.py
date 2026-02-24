@@ -11,6 +11,6 @@ llm = ChatOpenAI(
     api_key=LLM_API_KEY,
     default_headers={
         "HTTP-Referer": "http://localhost",   # optional but recommended
-        "X-Title": "Local RAG Script"
+        "X-Title": "SQL Agent API",  # optional but recommended
     }
 )
