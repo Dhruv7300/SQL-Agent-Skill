@@ -1,4 +1,4 @@
-from src.controller.workflow import build_sql_langgraph
+from src.controller.sql_agent.workflow import build_sql_langgraph
 
 def run_sql_pipeline(user_query: str):
     graph = build_sql_langgraph()

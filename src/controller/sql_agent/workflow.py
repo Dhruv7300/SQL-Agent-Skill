@@ -1,9 +1,9 @@
 import ast
 from langgraph.graph import StateGraph, END
-from src.controller.state import SQLFlowState
-from src.controller.nodes.schema_search import search_schema
-from src.controller.nodes.sql_generator import build_sql_query
-from src.controller.nodes.run_query import run_sql_query
+from src.controller.sql_agent.state import SQLFlowState
+from src.controller.sql_agent.nodes.schema_search import search_schema
+from src.controller.sql_agent.nodes.sql_generator import build_sql_query
+from src.controller.sql_agent.nodes.run_query import run_sql_query
 
 # -----------------------------
 # 1️⃣ Schema Search (Pinecone)
